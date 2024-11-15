@@ -15,15 +15,8 @@
         android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/incrementButton"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Нажми меня"/>
-
-    <Button
-        android:id="@+id/resetButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Сбросить счетчик"
-        android:layout_marginTop="20dp"/>
 </LinearLayout>

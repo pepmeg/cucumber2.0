@@ -11,24 +11,23 @@ class MainActivity : AppCompatActivity() {
 
     private var counter = 0
     private lateinit var counterText: TextView
-    private lateinit var incrementButton: Button
-    private lateinit var resetButton: Button
+    private lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         counterText = findViewById(R.id.counterText)
-        incrementButton = findViewById(R.id.incrementButton)
-        resetButton = findViewById(R.id.resetButton)
-        incrementButton.setOnClickListener {
+        button = findViewById(R.id.button)
+        button.setOnClickListener {
             counter++
             counterText.text = counter.toString()
-            Log.i("CounterApp", "Кнопка увеличения нажата. Текущее значение счетчика: $counter")
+            Log.i("CounterApp", "Кнопка нажата. Текущее значение счетчика: $counter")
         }
-        resetButton.setOnClickListener {
+        button.setOnLongClickListener {
             counter = 0
             counterText.text = counter.toString()
-            Log.i("CounterApp", "Кнопка сброса нажата. Счетчик сброшен на 0")
+            Log.i("CounterApp", "Долгое нажатие: Счетчик сброшен на 0")
+            true
         }
     }
 }
